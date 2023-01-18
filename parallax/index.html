@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: rgb(224, 170, 170);}
+        h1{font-size: 40px; color: rgb(32, 134, 100); padding: 10px; margin: 40px;}
+        #content{padding: 20em; margin: 40px; background: rgba(255,255,255,.4);}
+        #content p{font-size: 20px; line-height: 35px;}
+        #bigYellowCircle{background: url(./img/yellow_circle.svg) no-repeat center center/90%; width: 100vw; height: 100vh; z-index: -1; position: fixed; top: 0; opacity: .7;}
+        #blueSquare{background: url(./img/blue_square.svg) no-repeat 97% bottom/50%; width: 100vw; height: 100vh; z-index: -2; position: fixed; top: 0; opacity: .7;}
+        #greenPentagon{background: url(./img/green_pentagon.svg) no-repeat 5% top/50%; width: 100vw; height: 100vh; z-index: -3; position: fixed; top: 0; opacity: .7;}
+    </style>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <h1>Parallax scrolling</h1>
+    <div id="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. </p>
+        <p>it amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. </p>
+        <p>it amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>dolor, sit amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>amet consectetur adipisicing elit. Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+        <p>Inventore natus officiis nam. Aliquid, officia nam sint temporibus saepe repudiandae perferendis! Vel recusandae possimus praesentium doloremque ad numquam tenetur ex quod.</p>
+    </div>
+    <div id="bigYellowCircle"></div>
+    <div id="blueSquare"></div>
+    <div id="greenPentagon"></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+</head>
+<body>
+    <h1 id="title">javascript Basic Selector</h1>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li> li 1 </li>
+            <li> li 2 </li>
+            <li> li 3 </li>
+            <li> li 4 </li>
+            <li> li 5 </li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list2" class="list">
+            <li> li 1 </li>
+            <li> li 2 </li>
+            <li> li 3 </li>
+            <li> li 4 </li>
+            <li> li 5 </li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list3" class="list">
+            <li class="red"> li 1 </li>
+            <li> li 2 </li>
+            <li> li 3 </li>
+            <li id="list3_4"> li 4 </li>
+            <li> li 5 </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="box">
+            box level1
+            <div>
+                box level2
+                <div>
+                    box level3
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione ea illum unde velit sapiente deleniti ipsam sit ducimus aliquam reiciendis, nostrum possimus dolor sint deserunt eius necessitatibus recusandae accusamus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione ea illum unde velit sapiente deleniti ipsam sit ducimus aliquam reiciendis, nostrum possimus dolor sint deserunt eius necessitatibus recusandae accusamus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione ea illum unde velit sapiente deleniti ipsam sit ducimus aliquam reiciendis, nostrum possimus dolor sint deserunt eius necessitatibus recusandae accusamus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione ea illum unde velit sapiente deleniti ipsam sit ducimus aliquam reiciendis, nostrum possimus dolor sint deserunt eius necessitatibus recusandae accusamus.</p>
+
+    <script>
+        const title=document.getElementById('title');              //선언으로 가져와야함
+        // document.getElementById('title').style.color='red';     //방법1
+        title.style.color='blue';                                  //방법2
+        // document.getElementById('title').style.display='none'
+        const myList=document.getElementsByClassName('list');
+        const paragraphs=document.querySelectorAll('p');
+        const red=document.querySelector('.list .red');
+        myList[0].style.color="blue";                              //[0]=0번째 배열로 가져오기때문
+        myList[1].style.color="red";
+        myList[2].style.color="green";
+        paragraphs[0].style.color="red";
+        paragraphs[1].style.color="green";
+        red.style.color="red";
+
+        for(let i=0; i<paragraphs.length; i++){
+            paragraphs[i].addEventListener('mouseover', function(){
+            
+                this.style.color="orange";
+        
+            });
+            paragraphs[i].addEventListener('mouseout', function(){
+            
+                this.style.color="red";
+        
+            });
+        }
+
+       /*  for(let i=0; i<=myList.length; i++){
+            myList[i].style.color="orange";
+        } */
+
+    </script>
+</body>
+</html>

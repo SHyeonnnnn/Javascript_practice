@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h2>배열</h2>
+    <script>
+        let arr=new Array();
+        let arr1=[];
+        //순번은 0 부터 시작
+    {
+        let fruits=[];
+        fruits[0]='복숭아';
+        fruits[1]='사과';
+        fruits[2]='딸기';
+
+        document.write(fruits, '<br/>');
+    }
+    {
+        const fruits=['블루베리','바나나','체리'];
+        const animals=['고앵이','강아지','호랑이'];
+        document.write(fruits, '<br/>');
+        document.write(animals, '<br/>');
+        
+        const newArr1=fruits.concat(animals);
+        document.write(newArr1, '<br/>');
+        const amount=fruits.length;
+        document.write(amount, '<br/>');
+        const result= newArr1.join('?');
+        document.write(result, '<br/>');
+        const result1= animals.join('%');
+        document.write(result1, '<br/>');
+
+        const newArr3=fruits.reverse();
+        document.write(newArr3, '<br/>')
+        document.write(fruits, '<br/>')
+        
+        const newArr4=newArr1.slice(0,4); //원본 유지
+        document.write(newArr4, '<br/>')
+        document.write(newArr1, '<br/>')
+        
+        const newArr5=newArr1.splice(0,4); //원본에서 잘라서 가져오므로 손상됨.
+        document.write(newArr5, '<br/>')
+        document.write(newArr1, '<br/>')
+    }
+    </script>
+    <h2>값 추가 -push</h2>
+    <p>기존의 값 뒤에 추가</p>
+    <script>
+        let beers=[' 아사이',' 카스',' 하이트',' 테라'];
+        beers.push(' 코로나');
+        document.write(beers, '<br/>')
+        </script>
+    <h2>값 추가 -unshift</h2>
+    <p>기존의 값 앞에 추가</p>
+    <script>
+        beers.unshift(' 맥스');
+        document.write(beers, '<br/>')
+    </script>
+    <h2>값 삭제 -pop</h2>
+    <p>기존의 값 뒤에 삭제</p>
+    <script>
+        beers.pop();
+        document.write(beers, '<br/>')
+        </script>
+    <h2>값 삭제 -shift</h2>
+    <p>기존의 값 앞에 삭제</p>
+    <script>
+        beers.shift();
+        document.write(beers, '<br/>')
+    </script>
+    <script>
+        let days=new Array("일","월","화","수","목","금","토");
+        let today=new Date();
+        // console.log(today);
+        let yoil=days[today.getDay()];
+        let month=today.getMonth()+1;
+        document.write(today + "<br/>");
+        document.write(yoil + "요일<br/>");
+        document.write(month + "월달 <br/>");
+    </script>
+
+    <h2>string(문자열) 객체</h2>
+    <p>선언방법</p>
+    <script>
+        let str=new String("자바스크립트");
+        let str1="자바스크립트";
+
+        const theText="Web Jss hI cIty"
+        let theText1=theText.bold();
+        document.write(theText, '<br/>');
+        document.write(theText1, '<br/>');
+        let len=theText.length;
+        document.write(len, '<br/>'); //개수는 1부터
+        let upCase=theText.toUpperCase();
+        document.write(upCase, '<br/>');
+        let low=theText.toLocaleLowerCase();
+        document.write(low, '<br/>');
+        let inof=theText.indexOf("I");
+        document.write(inof, '<br/>');
+        let last=theText.lastIndexOf("I");
+        document.write(last, '<br/>');
+        let char=theText.charAt(5);
+        document.write(char, '<br/>');
+        let substr=theText.substring(4,6)//4번부터 6번 전 인덱스까지 문자 데이터를 반환
+        document.write(substr, '<br/>');
+        let substr1=theText.substr(4,6)//4번째에서 시작해서 6글자 반환
+        document.write(substr1, '<br/>');
+        let repl=theText.replace('Jss', "css")
+        document.write(repl, '<br/>');
+        let slice=theText.slice(7,9);//7번서9전
+        document.write(slice, '<br/>');
+        let comb=theText.concat("good");
+        document.write(comb, '<br/>');
+        let split=theText.split(" ")
+        document.write(split, '<br/>'); // 공백을 기준으로 데이터를 분리(콤마)
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #wrap{width: 500px; border: 5px solid #ddd; margin: 50px auto; padding: 30px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        focus / blur<br><br>
+        <input type="text" id="text1" onfocus="onFocus1();" onblur="onBlur1(this)" >
+        <br>
+        <hr>
+        <select id="select1" onchange="eventChange();">
+            <option value="KO">Korea</option>
+            <option value="CN">China</option>
+            <option value="JP">Japan</option>
+        </select>
+        <br>
+        <hr>
+        keydown
+        <br><br>
+        <input type="text" id="text2" onkeydown="eventKeydown()">
+        <button onclick="eventSave()">click</button>
+    </div>
+    <script>
+        function onFocus1(){
+            console.log('내용 쓰기')
+        };
+        function onBlur1(obj){
+            if(obj.value==""){
+                alert('필수 입력값입니다.')
+            }else{
+                console.log(obj.value);
+            }
+        }
+        function eventChange(){
+            let selectValue=document.getElementById("select1").value;
+            console.log(selectValue);
+        }
+        function eventKeydown(){
+            console.log(event.key);
+        }
+
+        function eventSave(){
+            console.log("저장완료")
+        }
+    </script>
+</body>
+</html>

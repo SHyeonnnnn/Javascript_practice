@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동물갤러리</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        a{font-weight: bold; text-decoration: none; color: #000;}
+        img{vertical-align: top; border: 0;}
+        #bannerWrap{width: 840px; height: 150px; margin: 100px auto; position: relative;}
+        .frame{width: 800px; overflow: hidden;}
+        #bannerList{position: relative; left: 0; width: 2800px; transition: .4s;}
+        #bannerList li{float: left; width: 200px; }
+        #bannerList li a{}
+        #bannerList li a img{}
+        .leftBtn{position: absolute; right: 5px; top: 40px; font-size: 30px;}
+        .rightBtn{position: absolute; right: 5px; top: 70px; font-size: 30px;}
+    </style>
+
+</head>
+<body>
+    <div id="bannerWrap">
+        <div class="frame">
+            <ul id="bannerList">
+                <li><a href="#"><img src="./img/img1.jpg" alt="1" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img2.jpg" alt="2" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img3.jpg" alt="3" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img4.jpg" alt="4" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img5.jpg" alt="5" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img6.jpg" alt="6" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img7.jpg" alt="7" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img1.jpg" alt="8" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img2.jpg" alt="9" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img3.jpg" alt="10" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img4.jpg" alt="11" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img5.jpg" alt="12" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img6.jpg" alt="13" width="200" height="150"></a></li>
+                <li><a href="#"><img src="./img/img7.jpg" alt="14" width="200" height="150"></a></li>
+            </ul>
+        </div>
+        <a href="javascript:" class="leftBtn" onclick="banner('leftBtn')">&lt;</a>
+        <a href="javascript:" class="rightBtn" onclick="banner('rightBtn')">&gt;</a>
+    </div>
+    <script>
+        let num=0;
+        let colWidth=-800;
+        function banner(whichBtn){
+            let bannerList=document.getElementById('bannerList');
+            if(whichBtn=="leftBtn"){
+                num--;
+                if(num<0) num=3;
+                let xPos=num*colWidth;
+                bannerList.style.left=xPos+'px';
+            }else {
+                num++;
+                if(num>3) num=0;
+                // console.log(num);
+                let xPos=num*colWidth;
+                bannerList.style.left=xPos+'px';
+            }
+        }
+    </script>
+</body>
+</html>

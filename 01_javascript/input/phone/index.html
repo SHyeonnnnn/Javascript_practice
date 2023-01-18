@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{width: 700px;padding: 30px;margin: 50px auto; border: 5px solid #ddd;}
+        input:invalid{border: 1px solid #f00;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="text" id="tel1" maxlength="3" onkeydown="checkNum(event, this.value)" onkeyup="next(this.value, 3, 'tel2')" required pattern="^01[0-9]{1}">
+        <input type="text" id="tel2" maxlength="4" onkeydown="checkNum(event, this.value)" onkeyup="next(this.value, 4, 'tel3')" required pattern="[0-9]{4}">
+        <input type="text" id="tel3" maxlength="4" onkeydown="checkNum(event, this.value)" required pattern="[0-9]{4}">
+    </div>
+    <script>
+        //010-4494-9814
+        function next(val, len, nextId){
+            if(val.length==len){
+                document.getElementById(nextId).focus();
+            }
+        }
+        function checkNum(event){
+            let key=event.key;
+            // console.log(key);
+            if(key >=0 && key <10 || key=='backspace'){
+                return true
+            }else{
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <style>
+        #wrap{width: 500px; border: 5px solid #ddd; margin: 50px auto; padding: 30px;}
+    </style>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        Text :
+        <br>
+        <input type="text" id="text1" value="abc" size="40">
+        <br>
+        <hr>
+        관심사 (checkbox) : 
+        <br>
+        <label><input type="checkbox" name="chk_interest" value="it"> IT/ 컴퓨터</label>
+        <label><input type="checkbox" name="chk_interest" value="sports"> 스포츠</label>
+        <label><input type="checkbox" name="chk_interest" value="shopping"> 쇼핑</label>
+        <label><input type="checkbox" name="chk_interest" value="book" checked="checked"> 도서</label>
+        <label><input type="checkbox" name="chk_interest" value="entertainment"> 엔터테인먼트</label>
+        <br>
+        <hr>
+        동의 (radio) :
+        <br>
+        <hr>
+        <label><input type="radio" name="radioY" value="Yes">동의</label>
+        <label><input type="radio" name="radioY" value="NO">비동의</label>
+        <br>
+        <hr>
+        선택 (select) :
+        <br>
+        <select id="select1">
+            <option value="KO">Korea</option>
+            <option value="CN">China</option>
+            <option value="JP">Japan</option>
+        </select>
+        <br>
+        <hr>
+        <div id="el">
+            <h1>제목</h1>
+        </div>
+        <br>
+        <hr>
+        <button type="button" onclick="save();">저장</button>
+    </div>
+</body>
+</html>

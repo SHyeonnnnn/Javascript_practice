@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동해안갤러리</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        #gallery{
+            width: 350px;
+            margin: 100px auto;
+            border: 5px solid rgb(162, 38, 84);
+            box-shadow: 5px 5px 10px #ccc;
+            text-align: center;
+            padding: 20px;
+        }
+        h1{margin: 10px 0;}
+        #photo img{border: 8px solid rgb(162, 38, 84); width: 100%; box-sizing: border-box;}
+        #photoList{width: 300px; overflow: hidden; margin: 10px auto;}
+        #photoList ul{width: 800px; margin: 0 auto; transition: .5s; position: relative; left: 0;}
+        #photoList ul::after{content: ""; display: block; clear: both;}
+        #photoList ul li{float: left; width: 100px; margin: 0 auto; text-align: center;}
+        #photoList ul li a img{border: 3px solid rgb(162, 38, 84);}
+        .btn-wrap a{font-weight: bold; text-decoration: none; color: #000;}
+    </style>
+    <script>
+        window.onload=function(){
+            let listZone=document.getElementById('innerList');
+            let listA=listZone.getElementsByTagName("a");
+
+            for(let i=0; i<listA.length; i++){
+                listA[i].onclick=function(){
+                    let ph=document.getElementById('photo').children[0];
+                    ph.src=this.href;
+                    return false;
+                }
+            }
+            const nextBtn=document.getElementById('next-btn');
+            const prevBtn=document.getElementById('before-btn');
+            let m_num=0;
+            nextBtn.onclick=function(){
+                if(m_num>=listA.length-3){return false}
+                m_num++;
+                listZone.style.left=-100*m_num +"px";
+            }
+            prevBtn.onclick=function(){
+                if(m_num<=0){return false}
+                m_num--;
+                listZone.style.left=-100*m_num +"px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <h1>동해안 갤러리</h1>
+        <p id="photo">
+            <img src="./images/pic_1.jpg" alt="1">
+        </p>
+        <div id="photoList">
+            <ul id="innerList">
+                <li><a href="./images/pic_1.jpg"><img src="./images/pic_t1.jpg" alt="1"></a></li>
+                <li><a href="./images/pic_2.jpg"><img src="./images/pic_t2.jpg" alt="2"></a></li>
+                <li><a href="./images/pic_3.jpg"><img src="./images/pic_t3.jpg" alt="3"></a></li>
+                <li><a href="./images/pic_4.jpg"><img src="./images/pic_t4.jpg" alt="4"></a></li>
+                <li><a href="./images/pic_5.jpg"><img src="./images/pic_t5.jpg" alt="5"></a></li>
+                <li><a href="./images/pic_6.jpg"><img src="./images/pic_t6.jpg" alt="6"></a></li>
+                <li><a href="./images/pic_7.jpg"><img src="./images/pic_t7.jpg" alt="7"></a></li>
+                <li><a href="./images/pic_8.jpg"><img src="./images/pic_t8.jpg" alt="8"></a></li>
+            </ul>
+        </div>
+        <p class="btn-wrap">
+            <a href="javascript:void()" id="before-btn">&lt;</a>
+            <a href="javascript:" id="next-btn">&gt;</a>
+        </p>
+    </div>
+</body>
+</html>

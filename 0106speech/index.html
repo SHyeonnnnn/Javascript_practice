@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{padding: 10px 20px; border: none; background: rgb(228, 169, 169); color: #fff;}
+    </style>
+</head>
+<body>
+    <p><button>click</button></p>
+    <script>
+        const buttons=document.querySelector("button");
+        const utterThis = new SpeechSynthesisUtterance("오늘은 7교시 수업입니다.");
+        buttons.addEventListener("click",() => {
+            window.speechSynthesis.speak(utterThis);
+        })
+    </script>
+</body>
+</html>

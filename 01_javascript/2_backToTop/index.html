@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모비딕</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <headr id="top">
+        <h1>Lorem ipsum</h1>
+        <h2>Dolor sit amet consectetur</h2>
+    </headr>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione possimus perferendis sint velit voluptate error quas dicta reprehenderit officiis omnis architecto! Esse, ex!
+        </p>
+        <p>
+            Error quas dicta reprehenderit officiis omnis elit. Facilis ratione possimus perferendis sint velit voluptate  architecto! Esse, ex!
+        </p>
+        <p>
+            Reprehenderit officiis omnis Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione possimus perferendis sint velit voluptate error quas dicta repre omnis architecto! Esse, ex!
+        </p>
+        <p>
+            Officiis omnis architecto! consectetur adipisicing elit. Facilis ratione possimus perferendis sint velit voluptate error quas dicta reprehenderit officiis omnis architecto! Esse, ex!
+        </p>
+        <p>
+            Possimus perferendis amet consectetur adipisicing elit. Facilis ratione   sint velit voluptate error quas dicta reprehenderit officiis omnis architecto! Esse, ex!
+        </p>
+    </main>
+    <footer>
+        <p>
+            <small>
+                <em>
+                    Facilis ratione possimus
+                    <a href="#">omnis architecto! Esse,</a>
+                </em>
+            </small>
+        </p>
+        <a href="#" id="back-to-top">Top</a>
+    </footer>
+    <script>
+        let bt=document.getElementById('back-to-top');
+        let docEl=document.documentElement; //문서 자체를 html가져와서 변수에 대입
+        let offset; //아직 값이 정해지지 않아서 스크롤 양
+        let scrollPos; //스크롤 양
+        let docHeight; //문서의 높이값
+
+        //문서의 높이값 계산
+        /* docHeight=docEl.scrollHeight; */ //브라우저마다 다르게 나타날수 있음. 1149
+        //docHeight=docEl.offsetHeight;
+        //scrollPos=docEl.scrollTop; //212
+        //console.log(scrollPos);
+
+        docHeight=Math.max(docEl.offsetHeight, docEl.scrollTop);
+        if(docHeight !=0){
+            offset=docHeight/10; // 끝까지 스크롤되지 않고 1/4만 스크롤 되면
+        }
+
+        window.addEventListener('scroll', function(){
+            scrollPos=docEl.scrollTop;
+            //console.log(scrollPos);
+            /* if(scrollPos> offset){
+                bt.className='visible';
+            }else{
+                bt.className='';
+            } */                                                                   //방법1
+
+            // if(scrollPos> offset) bt.className='visible'; else bt.className=''; //방법2
+
+            // (scrollPos> offset) ? bt.className='visible': bt.className='';      //방법3
+
+            bt.className=(scrollPos> offset) ? 'visible':'';                 //방법4
+        });
+
+        bt.addEventListener('click', function(e){
+            e.preventDefault(); //링크 본연의 기능을 막아줌
+            scrollTop();
+        })
+        function scrollTop(){
+            let scrollInterval=setInterval(function(){
+                if(scrollPos !=0){
+                    window.scrollBy(0,-20);
+                }else{
+                    clearInterval(scrollInterval);
+                }
+            },1);
+        }
+    </script>
+</body>
+</html>
